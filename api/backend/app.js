@@ -13,6 +13,7 @@ var addRecipeRouter = require('./routes/addNew');
 var searchRecipeRouter = require('./routes/search');
 var allRecipes = require('./routes/showRecipes');
 var app = express();
+app.listen(process.env.PORT || 3002);
 
 // database
 var dev_db_url = 'mongodb+srv://Tala:natalka123@cluster0.tfyy5.mongodb.net/recipe_app?retryWrites=true&w=majority';
