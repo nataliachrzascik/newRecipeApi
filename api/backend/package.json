@@ -5,7 +5,6 @@
   "scripts": {
     "start": "nodemon app.js"
   },
-  "heroku-run-build-script": true,
   "dependencies": {
     "async--await": "^1.0.2",
     "await": "^0.2.6",
