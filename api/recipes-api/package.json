@@ -47,6 +47,7 @@
     "heroku-postbuild": "cd client && npm install && npm run build",
     "eject": "react-scripts eject"
   },
+  "heroku-run-build-script": true,
   "eslintConfig": {
     "extends": [
       "react-app",
