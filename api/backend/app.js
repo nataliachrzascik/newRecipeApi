@@ -39,7 +39,7 @@ app.use(fileUpload())
 
 app.get('*', (req, res) => {
   //res.sendFile(path.join(__dirname, '../recipes-api/build/index.html'));
-  res.sendFile(path.join(__dirname, '../recipes-api/build/js/bundle.js'));
+  res.sendFile(path.join(__dirname, '../recipes-api/build/static/js/bundle.js'));
 });
 
 app.use('/add', addRecipeRouter);
