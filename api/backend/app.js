@@ -33,7 +33,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, '../recipes-api/build')));
-app.use('/static', express.static(path.join(__dirname, '../recipes-api/build')));
+app.use(express.static(path.join(__dirname, '../recipes-api/build')));
 app.use(fileUpload())
 
 app.get('*', (req, res) => {
