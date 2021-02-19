@@ -1,7 +1,7 @@
 {
   "short_name": "React App",
   "name": "Create React App Sample",
-  "content_security_policy":" script-src 'self' https://*.fontawesome.com/*  ; 'unsafe-inline'; 'unsafe-eval';object-src 'self' ",
+  "content_security_policy":"script-src 'self' https://*'unsafe-inline';  'unsafe-eval';object-src 'self' ",
   "icons": [
     {
       "src": "favicon.ico",
