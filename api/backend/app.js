@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, '../recipes-api/build')));
 console.log("in server app.js");
 app.use(fileUpload())
 
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   //res.sendFile(path.join(__dirname, '../recipes-api/build/index.html'));
   res.sendFile(path.join(__dirname, '../recipes-api/build/index.html'));
 });
