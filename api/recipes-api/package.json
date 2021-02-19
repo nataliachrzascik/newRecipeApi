@@ -1,7 +1,7 @@
 {
   "name": "recipes-api",
   "version": "0.1.0",
-  "homepage":"https://recipes-api-rnt.herokuapp.com/react-app/",
+  "homepage":"https://recipes-api-rnt.herokuapp.com",
   "engines": {
     "node": "14.15.1"
   },
