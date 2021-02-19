@@ -15,7 +15,7 @@ var app = express();
 app.listen(process.env.PORT || 3002);
 
 // database
-let deb_db_url = process.env.MONGODB_URI.URL;
+let deb_db_url = process.env.URL;
 console.log(deb_db_url);
 var dev_db_url = 'mongodb+srv://Tala:natalka123@cluster0.tfyy5.mongodb.net/recipe_app?retryWrites=true&w=majority';
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
