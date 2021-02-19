@@ -14,7 +14,7 @@ var allRecipes = require('./routes/showRecipes');
 var app = express();
 
 // database
-var dev_db_url = 'mongodb+srv://Tala:natalka123@cluster0.tfyy5.mongodb.net/recipe_app?retryWrites=true&w=majority';
+let dev_db_url = process.env.URL;
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
