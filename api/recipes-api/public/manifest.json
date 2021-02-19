@@ -1,7 +1,7 @@
 {
   "short_name": "React App",
   "name": "Create React App Sample",
-  "content_security_policy": "script-src 'self' https://recipes-api-rnt.herokuapp.com; object-src 'self'",
+  "content_security_policy": "default-src *; style-src 'self' https://* 'unsafe-inline'; script-src 'self' https://* 'unsafe-inline' 'unsafe-eval'",
   "icons": [
     {
       "src": "favicon.ico",

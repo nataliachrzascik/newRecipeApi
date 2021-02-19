@@ -40,7 +40,7 @@ const Recipes=(props:Iprops)=> {
     }, [props.url]);
     return (
         <Container className="col-sm-10 col-lg-8 col-xl-8 min-vh-100">
-            {ready ? (
+            {ready ? (console.log(posts),console.log(typeof(posts)),
                 posts?(posts.map((element, k) => {
                     return (
 
