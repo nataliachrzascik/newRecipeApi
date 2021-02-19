@@ -1,25 +1,4 @@
-{
-"compilerOptions": {
-  "target": "es5",
-  "jsx": "react",                          
-  "module": "commonjs",                    
-  "lib": [
-    "dom",
-    "dom.iterable",
-    "esnext"
-  ],                    
-  "allowJs": true,
-  "outDir": "build",                          
-  //"rootDir": "src",
-  "strict": true,         
-  "noImplicitAny": true,
-  "esModuleInterop": true,
-  "resolveJsonModule": true
-}
-}
 
-
-/*
 {
   "compilerOptions": {
     "target": "es5",
@@ -47,6 +26,31 @@
     "src"
   ]
 }
+
+
+
+/*
+{
+"compilerOptions": {
+  "target": "es5",
+  "jsx": "react",                          
+  "module": "commonjs",                    
+  "lib": [
+    "dom",
+    "dom.iterable",
+    "esnext"
+  ],                    
+  "allowJs": true,
+  "outDir": "build",                          
+  //"rootDir": "src",
+  "strict": true,         
+  "noImplicitAny": true,
+  "esModuleInterop": true,
+  "resolveJsonModule": true
+}
+}
+
+
 
 
 */

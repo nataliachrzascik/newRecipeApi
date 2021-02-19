@@ -36,7 +36,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../recipes-api/build')));
 console.log("in server app.js");
 app.use(fileUpload())
-
+//tu nizej była tylko sama gwiazdka
 app.get('/*', (req, res) => {
   //res.sendFile(path.join(__dirname, '../recipes-api/build/index.html'));
   res.sendFile(path.join(__dirname, '../recipes-api/build/index.html'));
