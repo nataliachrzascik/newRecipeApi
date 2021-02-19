@@ -2,11 +2,22 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var path = require('path');
 
 module.exports = {
-    entry: "./src/index.tsx",
+
     output: {
         path: path.resolve(__dirname, 'build'),
-        //filename: "static/js/bundle.js",
+        //filename: "static/bundle.min.js",
     },
+    /*
+    entry: "./src/index.tsx",
+output: {
+        path: path.resolve(__dirname, 'build'),
+        //filename: "static/bundle.min.js",
+
+        npm install -g serve
+  serve -s build
+    },
+
+    */
     resolve: {
         extensions: [".tsx", ".ts", ".js", ".json"],
     },
