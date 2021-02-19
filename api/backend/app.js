@@ -6,7 +6,6 @@ var logger = require('morgan');
 var cors = require('cors');
 const fileUpload = require('express-fileupload');
 var mongoose = require('mongoose');
-const aws = require('aws-sdk');
 
 
 var addRecipeRouter = require('./routes/addNew');
