@@ -4,6 +4,7 @@ const RecipeSchema = require('../models/recipe');
 var mongoose = require('mongoose');
 
 router.get(`/product:id`, (req, res) => {
+    console.log("in server search.js");
     RecipeSchema.find({ id: req.params.id })
         .then((data) => {
             res.json(data);

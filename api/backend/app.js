@@ -34,6 +34,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, '../recipes-api/build')));
 app.use(express.static(path.join(__dirname, '../recipes-api/build')));
+console.log("in server app.js");
 app.use(fileUpload())
 
 app.get('*', (req, res) => {
