@@ -33,14 +33,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, '../recipes-api/build')));
-app.use(express.static(path.join(__dirname, '../recipes-api/build')));
+app.use(express.static(path.resolve(__dirname, '../recipes-api/build')));
 console.log("in server app.js");
 app.use(fileUpload())
 //tu nizej była tylko sama gwiazdka
 app.get('/*', (req, res) => {
   //res.sendFile(path.join(__dirname, '../recipes-api/build/index.html'));
   console.log("backend /* w app.js")
-  res.sendFile(path.join(__dirname, '../recipes-api/build', "index.html"));
+  res.sendFile(path.resolve(__dirname, '../recipes-api/build', "index.html"));
 });
 
 app.use('/add', addRecipeRouter);
