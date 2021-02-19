@@ -6,7 +6,6 @@ var logger = require('morgan');
 var cors = require('cors');
 const fileUpload = require('express-fileupload');
 var mongoose = require('mongoose');
-var helmet = require('helmet');
 
 var addRecipeRouter = require('./routes/addNew');
 var searchRecipeRouter = require('./routes/search');
@@ -27,7 +26,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(cors());
-app.use(helmet());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
