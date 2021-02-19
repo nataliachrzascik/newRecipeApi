@@ -41,6 +41,7 @@ app.get('/*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../recipes-api/build', "index.html"));
 });
 
+//problem ze ścieżkami
 app.use('/add', addRecipeRouter);
 app.use('/search', searchRecipeRouter);
 app.use('/all', allRecipes);
