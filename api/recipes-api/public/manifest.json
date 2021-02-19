@@ -1,7 +1,7 @@
 {
   "short_name": "React App",
   "name": "Create React App Sample",
-  "content_security_policy":"script-src 'self' https://recipes-api-rnt.herokuapp.com 'unsafe-inline' 'unsafe-eval' https://kit.fontawesome.com",
+  "content_security_policy":"script-src 'self' https://recipes-api-rnt.herokuapp.com 'unsafe-inline' 'unsafe-eval' https://ka-f.fontawesome.com , https://kit.fontawesome.com",
   "icons": [
     {
       "src": "favicon.ico",
