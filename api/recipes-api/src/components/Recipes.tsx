@@ -24,14 +24,12 @@ const Recipes=(props:Iprops)=> {
 
         axios.get(`/all/api${props.url}`)
             .then((response) => {
-                console.log("response data");
-                console.log(response.data);
                 const data = response.data;
                 setPosts(data);
                 setReady(true)
             })
             .catch(() => {
-                alert(`Error received data! ${props.url} `);
+                alert(`Error received data! `);
             });
 
     }
@@ -42,7 +40,7 @@ const Recipes=(props:Iprops)=> {
     }, [props.url]);
     return (
         <Container className="col-sm-10 col-lg-8 col-xl-8 min-vh-100">
-            {ready ? (console.log(posts),console.log(typeof(posts)),
+            {ready ? (
                 posts?(posts.map((element, k) => {
                     return (
 

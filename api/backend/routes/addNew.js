@@ -4,7 +4,6 @@ const RecipeSchema = require('../models/recipe');
 let async = require('async--await');
 
 router.post('/', async (req, res) => {
-    console.log("in server addNew.js");
     let ingredients = req.body.ingredients.split(";");
     const count = await RecipeSchema.countDocuments();
     const newRecipe = new RecipeSchema({ id: count + 1, name: req.body.title, ingredients: ingredients, preparation: req.body.preparation, category: req.body.category, img: req.body.fileValue });

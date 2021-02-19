@@ -30,23 +30,16 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-//app.use(express.static(path.join(__dirname, '../recipes-api/build')));
 app.use(express.static(path.resolve(__dirname, '../recipes-api/build')));
-console.log("in server app.js");
 app.use(fileUpload())
-//tu nizej było /*
 app.get('/', (req, res) => {
-  //res.sendFile(path.join(__dirname, '../recipes-api/build/index.html'));
-  console.log("backend /* w app.js")
   res.sendFile(path.resolve(__dirname, '../recipes-api/build', "index.html"));
 });
 
-//problem ze ścieżkami
 app.use('/add', addRecipeRouter);
 app.use('/search', searchRecipeRouter);
 app.use('/all', allRecipes);
 
-//error handler's below
 app.use((req, res) => {
   res.status(404).json({
     message: 'Route Not Found'
