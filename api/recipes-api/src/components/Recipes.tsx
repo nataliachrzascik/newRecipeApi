@@ -29,7 +29,7 @@ const Recipes=(props:Iprops)=> {
                 setReady(true)
             })
             .catch(() => {
-                alert('Error received data! ');
+                alert(`Error received data! ${props.url} `);
             });
 
     }
