@@ -23,7 +23,7 @@ function funcRef(){
        setUrl(id)
     }
   }
-
+  window.addEventListener("hashchange", funcRef, false)
   return (
     <div className="App">
     <Container >
@@ -32,7 +32,6 @@ function funcRef(){
    <Menu />
 </div>
 <div className="col-md-10 col-lg-10 col-sm-8 bg-light">
-  {window.addEventListener("hashchange", funcRef, false)}
   {url?<Recipes url={url} />:null}
   <Switch>
     <Route exact path="/"><MainPage/></Route>
