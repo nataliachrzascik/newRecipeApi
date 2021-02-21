@@ -14,6 +14,7 @@ function App() {
     const url2 = url.substring(1);
     const indexSlash = url2.indexOf("/");
     const id = url2.substring(indexSlash + 1);
+    console.log(id)
     if(id==="sweets"||"main"||"soups"||"cocktails"){
       <Recipes url={id}/>
     }
