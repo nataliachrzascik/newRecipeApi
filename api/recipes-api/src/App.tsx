@@ -17,7 +17,8 @@ function App() {
        //console.log(`You changed the page to: ${location.pathname}`) 
        let pathname=location.pathname.slice(1);
        if(pathname==="sweets"||"main"||"soups"||"cocktails"){
-        console.log(`You changed the page to: ${pathname}`) 
+        console.log(`You changed the page to: ${pathname}`);
+        return <Recipes url={pathname} />
        }
        
     }) 
