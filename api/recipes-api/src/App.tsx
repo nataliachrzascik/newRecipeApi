@@ -9,14 +9,17 @@ import MainPage from './components/MainPage';
 import AddNew from './components/AddNew';
 
 function App() {
+  const [url, setUrl] = useState<string>("");
+
   useEffect(() => {
-    const url = window.location.pathname;
-    const url2 = url.substring(1);
-    const indexSlash = url2.indexOf("/");
-    const id = url2.substring(indexSlash + 1);
+    console.log("pathnamee");
+    let url = window.location.pathname;
+    let url2 = url.substring(1);
+    let indexSlash = url2.indexOf("/");
+    let id = url2.substring(indexSlash + 1);
     console.log(id)
     if(id==="sweets"||"main"||"soups"||"cocktails"){
-      <Recipes url={id}/>
+       setUrl(id)
     }
 }, [window.location.pathname]);
   return (
@@ -27,6 +30,7 @@ function App() {
    <Menu />
 </div>
 <div className="col-md-10 col-lg-10 col-sm-8 bg-light">
+  {url?<Recipes url={url} />:null}
   <Switch>
     <Route exact path="/"><MainPage/></Route>
   </Switch>
