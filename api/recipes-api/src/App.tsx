@@ -17,8 +17,9 @@ function App() {
     let url2 = url.substring(1);
     let indexSlash = url2.indexOf("/");
     let id = url2.substring(indexSlash + 1);
-    console.log(id)
+    console.log(url)
     if(id==="sweets"||"main"||"soups"||"cocktails"){
+      console.log(id)
        setUrl(id)
     }
 }, [window.location.pathname]);
