@@ -14,7 +14,10 @@ function App() {
   const history = useHistory();
   useEffect(() => {
     return history.listen((location) => { 
-       console.log(`You changed the page to: ${location.pathname}`) 
+       //console.log(`You changed the page to: ${location.pathname}`) 
+       let pathname=location.pathname.slice(1);
+       console.log(`You changed the page to: ${pathname}`) 
+       
     }) 
  },[history])
   return (
