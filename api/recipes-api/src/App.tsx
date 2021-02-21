@@ -24,8 +24,9 @@ function funcRef(){
     }
   }
   useEffect(() => {
-    funcRef()
-}, [window.location.pathname]);
+    window.addEventListener('popstate', funcRef)
+    //return () => window.removeEventListener('popstate', handleChange)
+}, []);
 
   //window.addEventListener("hashchange", funcRef, false)
   return (
