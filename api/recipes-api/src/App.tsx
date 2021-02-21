@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Menu from'./components/Menu';
 import Recipes from'./components/Recipes';
@@ -9,6 +9,15 @@ import MainPage from './components/MainPage';
 import AddNew from './components/AddNew';
 
 function App() {
+  useEffect(() => {
+    const url = window.location.pathname;
+    const url2 = url.substring(1);
+    const indexSlash = url2.indexOf("/");
+    const id = url2.substring(indexSlash + 1);
+    if(id==="sweets"||"main"||"soups"||"cocktails"){
+      <Recipes url={id}/>
+    }
+}, [window.location.pathname]);
   return (
     <div className="App">
     <Container >
