@@ -23,7 +23,11 @@ function funcRef(){
        setUrl(id)
     }
   }
-  window.addEventListener("hashchange", funcRef, false)
+  useEffect(() => {
+    funcRef()
+}, [window.location.pathname]);
+
+  //window.addEventListener("hashchange", funcRef, false)
   return (
     <div className="App">
     <Container >
