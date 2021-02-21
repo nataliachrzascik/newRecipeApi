@@ -22,7 +22,7 @@ function App() {
       console.log(id)
        setUrl(id)
     }
-}, [window.location.pathname]);
+},);
   return (
     <div className="App">
     <Container >
