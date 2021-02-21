@@ -16,7 +16,9 @@ function App() {
     return history.listen((location) => { 
        //console.log(`You changed the page to: ${location.pathname}`) 
        let pathname=location.pathname.slice(1);
-       console.log(`You changed the page to: ${pathname}`) 
+       if(pathname==="sweets"||"main"||"soups"||"cocktails"){
+        console.log(`You changed the page to: ${pathname}`) 
+       }
        
     }) 
  },[history])
