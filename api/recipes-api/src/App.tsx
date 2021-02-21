@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Menu from'./components/Menu';
 import Recipes from'./components/Recipes';
@@ -8,27 +8,15 @@ import { Switch, Route } from 'react-router-dom';
 import MainPage from './components/MainPage';
 import AddNew from './components/AddNew';
 
+import { useHistory } from 'react-router-dom'
+
 function App() {
-  const [url, setUrl] = useState<string>("");
-
-function funcRef(){
-    console.log("pathnamee");
-    let url = window.location.pathname;
-    let url2 = url.substring(1);
-    let indexSlash = url2.indexOf("/");
-    let id = url2.substring(indexSlash + 1);
-    console.log(url)
-    if(id==="sweets"||"main"||"soups"||"cocktails"){
-      console.log(id)
-       setUrl(id)
-    }
-  }
+  const history = useHistory();
   useEffect(() => {
-    window.addEventListener('popstate', funcRef)
-    //return () => window.removeEventListener('popstate', handleChange)
-}, []);
-
-  //window.addEventListener("hashchange", funcRef, false)
+    return history.listen((location) => { 
+       console.log(`You changed the page to: ${location.pathname}`) 
+    }) 
+ },[history])
   return (
     <div className="App">
     <Container >
@@ -37,7 +25,6 @@ function funcRef(){
    <Menu />
 </div>
 <div className="col-md-10 col-lg-10 col-sm-8 bg-light">
-  {url?<Recipes url={url} />:null}
   <Switch>
     <Route exact path="/"><MainPage/></Route>
   </Switch>

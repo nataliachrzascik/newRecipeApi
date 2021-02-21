@@ -1,7 +1,7 @@
 {
   "name": "recipes-api",
   "version": "0.1.0",
-  "homepage":"https://recipes-api-rnt.herokuapp.com",
+  "homepage": "https://recipes-api-rnt.herokuapp.com",
   "engines": {
     "node": "14.15.1"
   },
@@ -25,6 +25,7 @@
     "bootstrap": "^5.0.0-beta2",
     "css-loader": "^5.0.2",
     "es2018": "^1.0.0",
+    "file-loader": "^6.2.0",
     "glob": "^7.1.6",
     "image-to-base64": "^2.1.1",
     "less": "^4.1.1",
