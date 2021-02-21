@@ -11,7 +11,7 @@ import AddNew from './components/AddNew';
 function App() {
   const [url, setUrl] = useState<string>("");
 
-  useEffect(() => {
+function funcRef(){
     console.log("pathnamee");
     let url = window.location.pathname;
     let url2 = url.substring(1);
@@ -22,7 +22,8 @@ function App() {
       console.log(id)
        setUrl(id)
     }
-},);
+  }
+
   return (
     <div className="App">
     <Container >
@@ -31,6 +32,7 @@ function App() {
    <Menu />
 </div>
 <div className="col-md-10 col-lg-10 col-sm-8 bg-light">
+  {window.addEventListener("hashchange", funcRef, false)}
   {url?<Recipes url={url} />:null}
   <Switch>
     <Route exact path="/"><MainPage/></Route>
