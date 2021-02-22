@@ -19,7 +19,7 @@ const FoodCard = () => {
     const url = window.location.hash;
     console.log(url)
     alert(url)
-    const url2 = url.substring(1);
+    const url2 = url.substring(2);
     const indexSlash = url2.indexOf("/");
     const id = url2.substring(indexSlash + 1);
     console.log(id)
