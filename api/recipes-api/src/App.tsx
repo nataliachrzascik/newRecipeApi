@@ -19,7 +19,7 @@ function App() {
        //console.log(`You changed the page to: ${location.pathname}`) 
        let pathname=location.pathname.slice(1);
        if(pathname==="sweets"||"main"||"soups"||"cocktails"){
-         setUrl(pathname)
+         setUrl(pathname);
         console.log(`You changed the page to: ${pathname}`);
         //błąd pochodzi z backendu
        }
@@ -34,7 +34,6 @@ function App() {
    <Menu />
 </div>
 <div className="col-md-10 col-lg-10 col-sm-8 bg-light">
-  {url?<Recipes url={url} />:null}
   <Switch>
     <Route exact path="/"><MainPage/></Route>
   </Switch>

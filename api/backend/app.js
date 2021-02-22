@@ -41,6 +41,7 @@ app.use('/search', searchRecipeRouter);
 app.use('/all', allRecipes);
 
 app.use((req, res) => {
+  console.log(req);
   res.status(404).json({
     message: 'Route Not Found'
   });
