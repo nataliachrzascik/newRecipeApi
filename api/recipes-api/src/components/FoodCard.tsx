@@ -22,6 +22,7 @@ const FoodCard = () => {
     const indexSlash = url2.indexOf("/");
     const id = url2.substring(indexSlash + 1);
     console.log(id)
+    /*
     const getBlogPost = () => {
         axios.get(`/search/product${id}`)
             .then((response) => {
@@ -36,7 +37,7 @@ const FoodCard = () => {
 
     useEffect(() => {
         getBlogPost()
-    }, []);
+    }, []);*/
     return (
 
         <Container className="min-vh-100">
