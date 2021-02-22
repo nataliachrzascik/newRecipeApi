@@ -48,7 +48,7 @@ const Recipes=(props:Iprops)=> {
                             <img className="card-img-top" src={element.img ? element.img : background} alt="Card image" />
                             <div className="card-body">
                                 <h5 className="card-title">{element.name}</h5>
-                                <Link to={`/${props.url}/${element.id}`} className="btn btn-primary">
+                                <Link to={`/product/${element.id}`} className="btn btn-primary">
                                     Zobacz przepis
                                     </Link>
                             </div>
