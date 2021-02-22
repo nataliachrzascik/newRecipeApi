@@ -37,7 +37,7 @@ function App() {
 </div>
 <div className="col-md-10 col-lg-10 col-sm-8 bg-light">
 
-{url?<p>{url}</p> :<p>nic</p>}
+{url?console.log(url) :console.log("nic")}
   <Switch>
     <Route exact path="/"><MainPage/></Route>
   </Switch>
