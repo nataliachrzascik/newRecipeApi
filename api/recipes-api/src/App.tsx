@@ -37,7 +37,7 @@ function App() {
     <Route exact path="/cocktails" >
     <Recipes url="cocktails"/>
     </Route>
-    <Route path="/(sweets|main|soups|cocktails)/(.*)" ><FoodCard /></Route>
+    <Route path="/product/(.*)" ><FoodCard /></Route>
     <Route path="/add" ><AddNew /></Route>
   </Switch>
 </div>
