@@ -17,6 +17,7 @@ const FoodCard = () => {
     const [ready, setReady] = useState<boolean>(false);
 
     const url = window.location.pathname;
+    console.log(url)
     const url2 = url.substring(1);
     const indexSlash = url2.indexOf("/");
     const id = url2.substring(indexSlash + 1);
