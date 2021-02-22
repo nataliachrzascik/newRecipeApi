@@ -16,7 +16,7 @@ const FoodCard = () => {
     const [data, setData] = useState<Array<Idata>>([]);
     const [ready, setReady] = useState<boolean>(false);
 
-    const url = window.location.pathname;
+    const url = window.location.hash;
     console.log(url)
     alert(url)
     const url2 = url.substring(1);
