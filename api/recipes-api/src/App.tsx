@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 import './App.css';
 import Menu from'./components/Menu';
 import Recipes from'./components/Recipes';
@@ -11,14 +11,17 @@ import AddNew from './components/AddNew';
 import { useHistory } from 'react-router-dom'
 
 function App() {
+  const [url, setUrl] = useState<string>("");
+
   const history = useHistory();
   useEffect(() => {
     return history.listen((location) => { 
        //console.log(`You changed the page to: ${location.pathname}`) 
        let pathname=location.pathname.slice(1);
        if(pathname==="sweets"||"main"||"soups"||"cocktails"){
+         setUrl(pathname)
         console.log(`You changed the page to: ${pathname}`);
-        return <Recipes url={pathname} />
+        //błąd pochodzi z backendu
        }
        
     }) 
@@ -31,6 +34,7 @@ function App() {
    <Menu />
 </div>
 <div className="col-md-10 col-lg-10 col-sm-8 bg-light">
+  {url?<Recipes url={url} />:null}
   <Switch>
     <Route exact path="/"><MainPage/></Route>
   </Switch>
