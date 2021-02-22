@@ -4,40 +4,13 @@ import Menu from'./components/Menu';
 import Recipes from'./components/Recipes';
 import FoodCard from './components/FoodCard';
 import Container from 'react-bootstrap/Container';
-import { Switch, Route,useHistory,useLocation } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import MainPage from './components/MainPage';
 import AddNew from './components/AddNew';
 import axios from 'axios';
 import background from "./components/css/pot.jpg";
 
-function usePageViews() {
-  let location = useLocation();
-  useEffect(() => {
-    const currentPath = location.pathname;
-    const searchParams = new URLSearchParams(location.search);
-  }, [location]);
-  return <p>Profile</p>;
-}
-
-
 function App() {
-  const [url, setUrl] = useState<string>("");
-
-  const history = useHistory();
-  useEffect(() => {
-    return history.listen((location) => { 
-       //console.log(`You changed the page to: ${location.pathname}`) 
-       let pathname=location.pathname.slice(1);
-       if(pathname==="sweets"||"main"||"soups"||"cocktails"){
-         setUrl(pathname);
-        console.log(`You changed the page to: ${pathname}`);
-
-        //błąd pochodzi z backendu
-       }
-       
-    }) 
- },[history])
- usePageViews();
   return (
     <div className="App">
     <Container >

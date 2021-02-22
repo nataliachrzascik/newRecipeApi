@@ -23,6 +23,7 @@ const FoodCard = () => {
     const getBlogPost = () => {
         axios.get(`/search/product${id}`)
             .then((response) => {
+                console.log(id)
                 const data = response.data;
                 setData(data);
                 setReady(true)
