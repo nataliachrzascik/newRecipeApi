@@ -37,7 +37,7 @@ function App() {
 </div>
 <div className="col-md-10 col-lg-10 col-sm-8 bg-light">
 
-{url?<Recipes url={url} />:null}
+{url?<p>{url}</p> :<p>nic</p>}
   <Switch>
     <Route exact path="/"><MainPage/></Route>
   </Switch>
