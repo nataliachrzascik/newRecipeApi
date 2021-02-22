@@ -33,15 +33,6 @@ function App() {
        let pathname=location.pathname.slice(1);
        if(pathname==="sweets"||"main"||"soups"||"cocktails"){
          setUrl(pathname);
-         axios.get(`/all/api${pathname}`)
-         .then((response) => {
-             const data = response.data;
-             setPosts(data);
-             setReady(true)
-         })
-         .catch(() => {
-             alert(`Error received data! `);
-         });
         console.log(`You changed the page to: ${pathname}`);
         //błąd pochodzi z backendu
        }
@@ -57,19 +48,6 @@ function App() {
 </div>
 <div className="col-md-10 col-lg-10 col-sm-8 bg-light">
 
-{ready ? (
-                posts?(posts.map((element, k) => {
-                    return (
-
-                        <div key={k} className="card">
-                            <img className="card-img-top" src={element.img ? element.img :background} alt="Card image" />
-                            <div className="card-body">
-                                <h5 className="card-title">{element.name}</h5>
-                            </div>
-                        </div>
-                    )
-                })):null
-            ) : <i className="fas fa-4x fa-spinner fa-spin"></i>}
 
   <Switch>
     <Route exact path="/"><MainPage/></Route>
