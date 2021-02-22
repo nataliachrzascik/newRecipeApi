@@ -20,10 +20,10 @@ const FoodCard = () => {
     const url2 = url.substring(1);
     const indexSlash = url2.indexOf("/");
     const id = url2.substring(indexSlash + 1);
+    console.log(id)
     const getBlogPost = () => {
         axios.get(`/search/product${id}`)
             .then((response) => {
-                console.log(id)
                 const data = response.data;
                 setData(data);
                 setReady(true)
