@@ -12,19 +12,8 @@ import background from "./components/css/pot.jpg";
 
 import { useHistory } from 'react-router-dom'
 
-interface Iprops {
-  url: string;
-}
-interface Idata{
-  img:string;
-  name:string;
-  id:number;
-}
-
 function App() {
   const [url, setUrl] = useState<string>("");
-  const [posts, setPosts] = useState<Array<Idata>>([]);
-  const [ready, setReady] = useState<boolean>(false);
 
   const history = useHistory();
   useEffect(() => {
@@ -48,7 +37,7 @@ function App() {
 </div>
 <div className="col-md-10 col-lg-10 col-sm-8 bg-light">
 
-
+{url?<Recipes url={url} />:null}
   <Switch>
     <Route exact path="/"><MainPage/></Route>
   </Switch>
