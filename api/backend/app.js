@@ -39,9 +39,10 @@ app.get('/', (req, res) => {
 app.use('/add', addRecipeRouter);
 app.use('/search', searchRecipeRouter);
 app.use('/all', allRecipes);
+app.use('/sweets', allRecipes('/api:sweets'));
 
 app.use((req, res) => {
-  console.log(req.href);
+  console.log(req);
   res.status(404).json({
     message: 'Route Not Found'
   });
